@@ -55,16 +55,16 @@ npm run preview
 
 ```text
 tron-ares/
-├─ public/
-│  └─ assets/
-│     ├─ images/
-│     └─ videos/
-├─ src/
-│  ├─ main.js
-│  └─ style.css
-├─ index.html
-├─ package.json
-└─ README.md
+|- public/
+|  \- assets/
+|     |- images/
+|     \- videos/
+|- src/
+|  |- main.js
+|  \- style.css
+|- index.html
+|- package.json
+\- README.md
 ```
 
 ## Key Functionality
@@ -107,4 +107,4 @@ Images and videos are served from:
 
 ## License
 
-This repository currently has no explicit license. Add one if you plan to publish or distribute it publicly.
+This project is licensed under the MIT License. See `LICENSE` for details.

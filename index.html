@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRON: ARES | Enter the Grid</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23040a12'/%3E%3Cpath d='M20 24h24a6 6 0 0 1 6 6v12a8 8 0 0 1-8 8H22a8 8 0 0 1-8-8V30a6 6 0 0 1 6-6Z' fill='%23091420' stroke='%2300d4ff' stroke-width='3'/%3E%3Cpath d='M32 12v8' stroke='%2300d4ff' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M22 20h20' stroke='%2358d8ff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='26' cy='35' r='4' fill='%2358d8ff'/%3E%3Ccircle cx='38' cy='35' r='4' fill='%2358d8ff'/%3E%3Cpath d='M26 44h12' stroke='%2300d4ff' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M18 28l-4 4M46 28l4 4' stroke='%2358d8ff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <meta
+      name="description"
+      content="TRON: ARES — Action RPG meets Territory Strategy. Precision disc combat, neon traversal, and tactical control over the digital frontier."
+    />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+
+    <!-- ── Fixed background layer ── -->
+    <div class="background-stack" aria-hidden="true">
+      <video class="bg-video is-active" data-bg="hero" muted playsinline loop preload="metadata">
+        <source src="/assets/videos/1.mp4" type="video/mp4" />
+      </video>
+      <video class="bg-video" data-bg="features" muted playsinline loop preload="metadata">
+        <source src="/assets/videos/4.mp4" type="video/mp4" />
+      </video>
+      <video class="bg-video" data-bg="howto" muted playsinline loop preload="metadata">
+        <source src="/assets/videos/6.mp4" type="video/mp4" />
+      </video>
+      <video class="bg-video" data-bg="gallery" muted playsinline loop preload="metadata">
+        <source src="/assets/videos/10.mp4" type="video/mp4" />
+      </video>
+      <div class="bg-overlay"></div>
+      <div class="bg-grid"></div>
+    </div>
+
+    <!-- ── Site header ── -->
+    <header class="site-header">
+      <div class="utility-bar">
+        <div class="utility-links">
+          <a href="#gallery">Media</a>
+          <a href="#features">Gameplay</a>
+          <a href="#footer">Press</a>
+        </div>
+        <div class="utility-links">
+          <a href="#beta" class="utility-cta">Beta Access</a>
+          <span class="utility-pill">ENCOM // ARES DIVISION</span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#hero" class="brand-mark">
+          <span class="brand-mark__tron">TRON</span>
+          <span class="brand-mark__ares">: ARES</span>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#hero" data-nav>Home</a>
+          <a href="#features" data-nav>The Game</a>
+          <a href="#howto" data-nav>How It Plays</a>
+          <a href="#gallery" data-nav>Media</a>
+          <a href="#beta" data-nav>Sign Up</a>
+        </div>
+
+        <div class="nav-end">
+          <a href="#beta" class="btn btn-primary btn-sm">Join Beta</a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+
+      <!-- ════════════════════════════════
+           1. HERO
+      ════════════════════════════════ -->
+      <section class="section hero-section" id="hero" data-section="hero">
+        <div class="hero-inner">
+
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Action RPG × Territory Strategy</p>
+            <h1 class="hero-title">
+              <span>Enter</span>
+              <span class="accent-text">the Grid.</span>
+            </h1>
+            <p class="hero-text">
+              Precision disc combat, neon traversal, and tactical control over the digital
+              frontier. A premium TRON: ARES experience built for high-speed action and
+              strategic depth.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#beta">Join the Beta</a>
+              <button class="btn btn-ghost" type="button" data-scroll="#gallery">
+                Watch Media <span class="arrow-icon">↗</span>
+              </button>
+            </div>
+            <ul class="hero-stats" aria-label="Game highlights">
+              <li><strong>50K+</strong><span>Beta registrations</span></li>
+              <li><strong>12</strong><span>Grid sectors</span></li>
+              <li><strong>4</strong><span>Combat modes</span></li>
+            </ul>
+          </div>
+
+          <!-- ══ Physical TCG card stack ══ -->
+          <div class="hero-visual reveal">
+            <div class="card-stack">
+
+              <!-- Card 1 — large, top-right -->
+              <article class="floating-card floating-card--lg">
+                <div class="tcg-card tcg-card--legendary">
+                  <div class="tcg-outer-frame">
+                    <div class="tcg-inner">
+                      <div class="tcg-header">
+                        <span class="tcg-name">Disc Combat</span>
+                        <span class="tcg-cost">94</span>
+                      </div>
+                      <div class="tcg-art-window">
+                        <img src="/assets/images/1.jpg" alt="TRON ARES disc combat scene" />
+                        <div class="tcg-art-overlay"></div>
+                      </div>
+                      <div class="tcg-type-bar">
+                        <span class="tcg-rarity-icon">◆</span>
+                        <span class="tcg-type-text">Arena Combat — Legendary</span>
+                        <span class="tcg-rarity-icon">◆</span>
+                      </div>
+                      <div class="tcg-text-box">
+                        <p class="tcg-flavour">"The disc never misses twice — because there is no second throw."</p>
+                        <div class="tcg-stat-row">
+                          <span class="tcg-stat tcg-stat--atk"><em>ATK</em> 9</span>
+                          <span class="tcg-divider-dot">◇</span>
+                          <span class="tcg-stat tcg-stat--def"><em>DEF</em> 7</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tcg-glow tcg-glow--cyan"></div>
+                </div>
+              </article>
+
+              <!-- Card 2 — medium, bottom-left -->
+              <article class="floating-card floating-card--md">
+                <div class="tcg-card tcg-card--rare">
+                  <div class="tcg-outer-frame">
+                    <div class="tcg-inner">
+                      <div class="tcg-header">
+                        <span class="tcg-name">Neon Sectors</span>
+                        <span class="tcg-cost">71</span>
+                      </div>
+                      <div class="tcg-art-window">
+                        <img src="/assets/images/9.jpg" alt="TRON ARES neon grid skyline" />
+                        <div class="tcg-art-overlay"></div>
+                      </div>
+                      <div class="tcg-type-bar">
+                        <span class="tcg-rarity-icon">◆</span>
+                        <span class="tcg-type-text">Grid Territory — Rare</span>
+                        <span class="tcg-rarity-icon">◆</span>
+                      </div>
+                      <div class="tcg-text-box">
+                        <p class="tcg-flavour">"Every sector won reshapes the balance of the entire Grid."</p>
+                        <div class="tcg-stat-row">
+                          <span class="tcg-stat tcg-stat--atk"><em>ATK</em> 6</span>
+                          <span class="tcg-divider-dot">◇</span>
+                          <span class="tcg-stat tcg-stat--def"><em>DEF</em> 8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tcg-glow tcg-glow--purple"></div>
+                </div>
+              </article>
+
+              <!-- Card 3 — small, back-bottom -->
+              <article class="floating-card floating-card--sm">
+                <div class="tcg-card tcg-card--common">
+                  <div class="tcg-outer-frame">
+                    <div class="tcg-inner">
+                      <div class="tcg-header">
+                        <span class="tcg-name">Program Loadout</span>
+                        <span class="tcg-cost">48</span>
+                      </div>
+                      <div class="tcg-art-window">
+                        <img src="/assets/images/3.jpg" alt="TRON ARES program interface" />
+                        <div class="tcg-art-overlay"></div>
+                      </div>
+                      <div class="tcg-type-bar">
+                        <span class="tcg-rarity-icon">◇</span>
+                        <span class="tcg-type-text">Build System — Common</span>
+                        <span class="tcg-rarity-icon">◇</span>
+                      </div>
+                      <div class="tcg-text-box">
+                        <p class="tcg-flavour">"Design your Program. Define your fate."</p>
+                        <div class="tcg-stat-row">
+                          <span class="tcg-stat tcg-stat--atk"><em>ATK</em> 4</span>
+                          <span class="tcg-divider-dot">◇</span>
+                          <span class="tcg-stat tcg-stat--def"><em>DEF</em> 5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════
+           2. FEATURES / OVERVIEW
+           — Serif editorial + back-cover blurb
+           + parchment feel + game-manual entries
+      ════════════════════════════════ -->
+      <section class="section overview-section" id="features" data-section="features">
+        <div class="overview-inner">
+
+          <!-- Left: 2×2 image grid (structure unchanged) -->
+          <div class="feature-visual-col reveal">
+            <div class="overview-card-stage">
+              <article class="overview-card overview-card--rear-left">
+                <div class="tcg-card tcg-card--common">
+                  <div class="tcg-outer-frame">
+                    <div class="tcg-inner">
+                      <div class="tcg-header">
+                        <span class="tcg-name">Program Designer</span>
+                        <span class="tcg-cost">58</span>
+                      </div>
+                      <div class="tcg-art-window">
+                        <img src="/assets/images/5.jpg" alt="Program customization" />
+                        <div class="tcg-art-overlay"></div>
+                      </div>
+                      <div class="tcg-type-bar">
+                        <span class="tcg-rarity-icon">◇</span>
+                        <span class="tcg-type-text">Build System</span>
+                        <span class="tcg-rarity-icon">◇</span>
+                      </div>
+                      <div class="tcg-text-box">
+                        <p class="tcg-flavour">Shape the loadout before the sector shapes you.</p>
+                        <div class="tcg-stat-row">
+                          <span class="tcg-stat tcg-stat--atk"><em>ATK</em> 5</span>
+                          <span class="tcg-divider-dot">◇</span>
+                          <span class="tcg-stat tcg-stat--def"><em>DEF</em> 6</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="overview-card overview-card--rear-right">
+                <div class="tcg-card tcg-card--rare">
+                  <div class="tcg-outer-frame">
+                    <div class="tcg-inner">
+                      <div class="tcg-header">
+                        <span class="tcg-name">Grid Infiltration</span>
+                        <span class="tcg-cost">63</span>
+                      </div>
+                      <div class="tcg-art-window">
+                        <img src="/assets/images/77.jpg" alt="Grid infiltration" />
+                        <div class="tcg-art-overlay"></div>
+                      </div>
+                      <div class="tcg-type-bar">
+                        <span class="tcg-rarity-icon">◆</span>
+                        <span class="tcg-type-text">System Breach</span>
+                        <span class="tcg-rarity-icon">◆</span>
+                      </div>
+                      <div class="tcg-text-box">
+                        <p class="tcg-flavour">Slip between defenses and let the Grid become your weapon.</p>
+                        <div class="tcg-stat-row">
+                          <span class="tcg-stat tcg-stat--atk"><em>ATK</em> 6</span>
+                          <span class="tcg-divider-dot">◇</span>
+                          <span class="tcg-stat tcg-stat--def"><em>DEF</em> 7</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tcg-glow tcg-glow--purple"></div>
+                </div>
+              </article>
+
+              <article class="overview-card overview-card--front">
+                <div class="tcg-card tcg-card--legendary">
+                  <div class="tcg-outer-frame">
+                    <div class="tcg-inner">
+                      <div class="tcg-header">
+                        <span class="tcg-name">Faction Campaign</span>
+                        <span class="tcg-cost">90</span>
+                      </div>
+                      <div class="tcg-art-window">
+                        <img src="/assets/images/4.jpg" alt="Faction campaign visual" />
+                        <div class="tcg-art-overlay"></div>
+                      </div>
+                      <div class="tcg-type-bar">
+                        <span class="tcg-rarity-icon">◆</span>
+                        <span class="tcg-type-text">Grid Control — Legendary</span>
+                        <span class="tcg-rarity-icon">◆</span>
+                      </div>
+                      <div class="tcg-text-box">
+                        <p class="tcg-flavour">Every district won rewrites the next battle before it starts.</p>
+                        <div class="tcg-stat-row">
+                          <span class="tcg-stat tcg-stat--atk"><em>ATK</em> 8</span>
+                          <span class="tcg-divider-dot">◇</span>
+                          <span class="tcg-stat tcg-stat--def"><em>DEF</em> 9</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tcg-glow tcg-glow--cyan"></div>
+                </div>
+              </article>
+
+              <article class="overview-card overview-card--bottom">
+                <div class="tcg-card tcg-card--rare">
+                  <div class="tcg-outer-frame">
+                    <div class="tcg-inner">
+                      <div class="tcg-header">
+                        <span class="tcg-name">Arena Duels</span>
+                        <span class="tcg-cost">72</span>
+                      </div>
+                      <div class="tcg-art-window">
+                        <img src="/assets/images/6.jpg" alt="Arena duel combat" />
+                        <div class="tcg-art-overlay"></div>
+                      </div>
+                      <div class="tcg-type-bar">
+                        <span class="tcg-rarity-icon">◆</span>
+                        <span class="tcg-type-text">Arena Pressure</span>
+                        <span class="tcg-rarity-icon">◆</span>
+                      </div>
+                      <div class="tcg-text-box">
+                        <p class="tcg-flavour">Fast reactions decide who derezzes first.</p>
+                        <div class="tcg-stat-row">
+                          <span class="tcg-stat tcg-stat--atk"><em>ATK</em> 7</span>
+                          <span class="tcg-divider-dot">◇</span>
+                          <span class="tcg-stat tcg-stat--def"><em>DEF</em> 5</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tcg-glow tcg-glow--purple"></div>
+                </div>
+              </article>
+
+              <div class="overview-card-caption">
+                <span class="overview-card-caption__line"></span>
+                <span class="overview-card-caption__text">Core Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: book + editorial + game-manual copy -->
+          <div class="feature-copy-col reveal">
+            <p class="eyebrow">Overview</p>
+
+            <!-- Parchment ornamental header rule -->
+            <div class="book-ornament" aria-hidden="true">
+              <span class="orn-line"></span>
+              <span class="orn-glyph">✦</span>
+              <span class="orn-line"></span>
+            </div>
+
+            <h2 class="section-title book-title">What is<br>TRON: ARES?</h2>
+
+            <!-- Serif back-cover pull-quote -->
+            <blockquote class="book-blurb">
+              <span class="blurb-mark" aria-hidden="true">"</span>
+              A hybrid action RPG and strategic territory-control game where each mission
+              changes the balance of power. Design your Program, hack sectors, and move
+              from skirmishes to large-scale Grid domination.
+              <span class="blurb-mark blurb-mark--close" aria-hidden="true">"</span>
+            </blockquote>
+
+            <!-- Running editorial body paragraphs -->
+            <div class="book-body">
+              <p>
+                Set deep within the digital frontier of the Grid, <em>TRON: ARES</em> fuses
+                lightning-fast disc combat with the slow-burn tension of territorial conquest.
+                Every sector won, every program upgraded, every enemy derezz'd reshapes the
+                landscape for the next mission.
+              </p>
+              <p>
+                Whether you're a lone operative cutting through enemy lines or a faction
+                commander coordinating Grid-wide campaigns, the world responds to your every
+                move. No two runs through the Grid are ever the same.
+              </p>
+            </div>
+
+            <!-- Decorative rule between paragraphs and entries -->
+            <div class="book-rule" aria-hidden="true">
+              <span class="rule-line"></span>
+              <span class="rule-gems">✦ ✦ ✦</span>
+              <span class="rule-line"></span>
+            </div>
+
+            <!-- Game-manual bordered chapter entries -->
+            <ul class="book-feature-list">
+              <li class="book-feature-item">
+                <div class="book-chapter-num" aria-hidden="true">I</div>
+                <div class="book-chapter-body">
+                  <h4>Faction Campaign</h4>
+                  <p>Push influence across the Grid and shape how regions answer to your faction. Alliances shift — loyalty must be earned through action.</p>
+                </div>
+              </li>
+              <li class="book-feature-item">
+                <div class="book-chapter-num" aria-hidden="true">II</div>
+                <div class="book-chapter-body">
+                  <h4>Program Designer</h4>
+                  <p>Build specialized loadouts combining mobility, defense, and disc mastery. Every Program tells a different story on the battlefield.</p>
+                </div>
+              </li>
+              <li class="book-feature-item">
+                <div class="book-chapter-num" aria-hidden="true">III</div>
+                <div class="book-chapter-body">
+                  <h4>Grid Infiltration</h4>
+                  <p>Hack routes, disable defenses, and use the environment as part of the fight. The Grid is your weapon as much as your arena.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#gallery" class="btn btn-outline">Explore the media library →</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════
+           3. HOW IT PLAYS
+      ════════════════════════════════ -->
+      <section class="section gameplay-section" id="howto" data-section="howto">
+        <div class="gameplay-inner">
+
+          <div class="gameplay-copy reveal">
+            <p class="eyebrow">Gameplay</p>
+            <h2 class="section-title">How do<br>you play?</h2>
+            <p class="section-body">
+              Switch between light-cycle speed, direct arena combat, and strategic expansion.
+              Each layer feeds the next — movement opens territory, territory unlocks resources,
+              and resources sharpen how your Program fights.
+            </p>
+            <div class="pill-grid">
+              <span>Identity Disc Combat</span>
+              <span>Sector Control</span>
+              <span>Program Builds</span>
+              <span>Light-Cycle Movement</span>
+            </div>
+            <a href="#beta" class="btn btn-primary">Claim Beta Access</a>
+          </div>
+
+          <div class="gameplay-video-col reveal">
+            <div class="video-panel">
+              <video muted autoplay loop playsinline preload="metadata">
+                <source src="/assets/videos/4.mp4" type="video/mp4" />
+              </video>
+              <div class="video-badge">Live Gameplay</div>
+            </div>
+            <img
+              class="character-accent"
+              src="/assets/images/ast.jpg"
+              alt="TRON ARES character art"
+            />
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════
+           4. GALLERY / SHOWCASE
+      ════════════════════════════════ -->
+      <section class="section gallery-section" id="gallery" data-section="gallery">
+
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">Media Gallery</p>
+          <h2 class="section-title">Video Showcase</h2>
+          <p class="section-body" style="max-width:480px;margin:0 auto;">
+            Explore all footage from the Grid — every clip loaded from your local project assets.
+          </p>
+        </div>
+
+        <div class="gallery-shell reveal">
+          <div class="gallery-stage" id="carMain"></div>
+          <div class="gallery-controls">
+            <button type="button" class="gallery-arrow" id="prevBtn" aria-label="Previous video">‹</button>
+            <div class="gallery-counter">
+              <span id="counter">1</span>
+              <span class="counter-sep">/</span>
+              <span id="totalSlides">11</span>
+            </div>
+            <button type="button" class="gallery-arrow" id="nextBtn" aria-label="Next video">›</button>
+          </div>
+          <div class="gallery-thumbs" id="thumbs"></div>
+        </div>
+
+      </section>
+
+      <!-- ════════════════════════════════
+           5. BETA CTA / SIGNUP
+      ════════════════════════════════ -->
+      <section class="section signup-section" id="beta" data-section="beta">
+
+        <div class="signup-card reveal">
+          <div class="signup-glow" aria-hidden="true"></div>
+
+          <div class="signup-copy">
+            <p class="eyebrow">Beta Sign-Up</p>
+            <h2 class="signup-title">Claim your<br>access key.</h2>
+            <p class="signup-body">
+              Leave a message in the queue and be first to enter the next wave of Grid testing.
+            </p>
+          </div>
+
+          <form class="signup-form" id="betaForm" novalidate>
+            <label class="sr-only" for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Your e-mail address"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+
+          <div class="stats-grid">
+            <article class="stat-item">
+              <strong>50K+</strong>
+              <span>Beta registrations</span>
+            </article>
+            <article class="stat-item">
+              <strong>12</strong>
+              <span>Grid sectors</span>
+            </article>
+            <article class="stat-item">
+              <strong>4</strong>
+              <span>Game modes</span>
+            </article>
+            <article class="stat-item">
+              <strong>∞</strong>
+              <span>Possibilities</span>
+            </article>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- ════════════════════════════════
+         6. FOOTER — exact Faeria structure
+         • Logo + tagline centered at top
+         • Horizontal inline nav with · separators
+         • Decorative divider
+         • Single centered legal strip at bottom with studio label right
+    ════════════════════════════════ -->
+    <footer class="site-footer" id="footer">
+
+      <div class="footer-main">
+
+        <!-- Logo block, centered -->
+        <a href="#hero" class="footer-logo brand-mark">
+          <span class="brand-mark__tron">TRON</span>
+          <span class="brand-mark__ares">: ARES</span>
+        </a>
+
+        <p class="footer-tagline">Action strategy in a cinematic neon shell.</p>
+
+        <!-- Horizontal nav with · separators — Faeria style -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#hero">Home</a>
+          <span class="fnav-sep" aria-hidden="true">·</span>
+          <a href="#features">The Game</a>
+          <span class="fnav-sep" aria-hidden="true">·</span>
+          <a href="#howto">How It Plays</a>
+          <span class="fnav-sep" aria-hidden="true">·</span>
+          <a href="#gallery">Media</a>
+          <span class="fnav-sep" aria-hidden="true">·</span>
+          <a href="#beta">Sign Up</a>
+        </nav>
+
+        <!-- Neon ornamental divider -->
+        <div class="footer-ornament" aria-hidden="true">
+          <span class="fo-line"></span>
+          <span class="fo-gem">◆</span>
+          <span class="fo-line"></span>
+        </div>
+
+      </div>
+
+      <!-- Bottom legal strip — Faeria: all inline, centered, with · separators, studio label on far right -->
+      <div class="footer-legal">
+        <div class="footer-legal-inner">
+          <span class="footer-copy">© 2026 Fan concept. All TRON assets property of their respective owners.</span>
+          <span class="fnav-sep" aria-hidden="true">·</span>
+          <a href="#features">Overview</a>
+          <span class="fnav-sep" aria-hidden="true">·</span>
+          <a href="#gallery">Media</a>
+          <span class="fnav-sep" aria-hidden="true">·</span>
+          <a href="#footer">Press</a>
+        </div>
+        <span class="footer-studio">ENCOM // ARES DIVISION</span>
+      </div>
+
+    </footer>
+
+  </body>
+</html>
